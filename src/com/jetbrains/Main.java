@@ -65,7 +65,7 @@ public class Main {
             Scanner scnr = new Scanner(System.in);
             userNum = scnr.nextInt();
             } catch (InputMismatchException e) {
-            System.out.println("Error: This program only accepts integers between 1 and 10.");
+            System.out.println("Error: This program only accepts integers between 1 and 20.");
         }
 
         return userNum;

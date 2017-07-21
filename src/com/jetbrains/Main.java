@@ -15,11 +15,11 @@ public class Main {
         System.out.println("Welcome to our Java Class! ");
 
         do {
-            System.out.println("Choose a number between 1 and 10 to hear about a particular student: ");
+            System.out.println("Choose a number between 1 and 20 to hear about a particular student: ");
 
             int userInput = getUser();
 
-            if (userInput < 1 || userInput > 10) {
+            if (userInput < 1 || userInput > 20) {
                 knowAnotherStudent="yes";
                 continue;
             }
@@ -34,15 +34,19 @@ public class Main {
             System.out.println("The student's name is " + name + ".");
 
             System.out.println("What would you like to know about " + getName(userInput) + "?");
-            System.out.println("(Enter either hometown or favoritefood)");
+            System.out.println("(Enter either hometown or favorite food)");
 
             String answer = scnr.next();
+            scnr.nextLine();
 
-            if (answer.equals("hometown")) {
+            if (answer.contains("hometown")) {
                 System.out.println(getName(userInput) + " was born in " + getHometown(userInput) + ".");
             }
-            else if (answer.equals("favoritefood")){
+            else if (answer.contains("favorite")){
                 System.out.println(getName(userInput) + " s favorite food is " + getFood(userInput) + ".");
+            }
+            else {
+                System.out.println("Sorry. That is an invalid term.");
             }
 
             System.out.println("Would you like to know another student? ");
@@ -69,12 +73,12 @@ public class Main {
 
     public static String getName(int userInput) {
 
-        final int NUM_ELEMENTS = 10;
+        final int NUM_ELEMENTS = 21;
         String name = "";
 
         String[] studentNames = new String[NUM_ELEMENTS];
 
-        studentNames[0] = "Aaron";
+        studentNames[0] = "";
         studentNames[1] = "Jordy";
         studentNames[2] = "Clay";
         studentNames[3] = "Randall";
@@ -84,6 +88,17 @@ public class Main {
         studentNames[7] = "Donald";
         studentNames[8] = "Greg";
         studentNames[9] = "Antonio";
+        studentNames[10] = "Peter";
+        studentNames[11] = "Anthony";
+        studentNames[12] = "Tracy";
+        studentNames[13] = "Rachel";
+        studentNames[14] = "Kayla";
+        studentNames[15] = "Arianna";
+        studentNames[16] = "Mindy";
+        studentNames[17] = "Patricia";
+        studentNames[18] = "Alyssa";
+        studentNames[19] = "Bianca";
+        studentNames[20] = "LeRoy";
 
         try {
             name = studentNames[userInput];
@@ -96,12 +111,12 @@ public class Main {
 
     public static String getHometown(int userInput) {
 
-        final int NUM_ELEMENTS = 10;
+        final int NUM_ELEMENTS = 21;
         String hometown = "";
 
         String[] studentHometown = new String[NUM_ELEMENTS];
 
-           studentHometown[0] = "Chico";
+           studentHometown[0] = "";
            studentHometown[1] = "Manhattan";
            studentHometown[2] = "Northridge";
            studentHometown[3] = "Maryville";
@@ -111,6 +126,18 @@ public class Main {
            studentHometown[7] = "Houston";
            studentHometown[8] = "Kalamazoo";
            studentHometown[9] = "Miami";
+           studentHometown[10] = "Dallas";
+           studentHometown[11] = "Richmond";
+           studentHometown[12] = "Ann Arbor";
+           studentHometown[13] = "Seattle";
+           studentHometown[14] = "Detroit";
+           studentHometown[15] = "Cambria";
+           studentHometown[16] = "Columbus";
+           studentHometown[17] = "Toledo";
+           studentHometown[18] = "Miami";
+           studentHometown[19] = "Chicago";
+           studentHometown[20] = "Madison";
+
 
            hometown = studentHometown[userInput];
 
@@ -120,12 +147,12 @@ public class Main {
 
     public static String getFood(int userInput) {
 
-        final int NUM_ELEMENTS = 10;
+        final int NUM_ELEMENTS = 21;
         String favoriteFood = "";
 
         String[] studentFood = new String[NUM_ELEMENTS];
 
-        studentFood[0] = "steak";
+        studentFood[0] = "";
         studentFood[1] = "fries";
         studentFood[2] = "tuna pasta casserole";
         studentFood[3] = "hot dogs";
@@ -135,6 +162,17 @@ public class Main {
         studentFood[7] = "pasta";
         studentFood[8] = "hamburger";
         studentFood[9] = "meatloaf";
+        studentFood[10] = "ice cream";
+        studentFood[11] = "ceasar salad";
+        studentFood[12] = "pumpkin pie";
+        studentFood[13] = "grape jelly";
+        studentFood[14] = "pineapple";
+        studentFood[15] = "yogurt";
+        studentFood[16] = "cheesecake";
+        studentFood[17] = "pizza";
+        studentFood[18] = "Snickers bar";
+        studentFood[19] = "pasta";
+        studentFood[20] = "cookies";
 
         favoriteFood = studentFood[userInput];
 
